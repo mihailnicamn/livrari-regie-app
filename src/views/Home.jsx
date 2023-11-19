@@ -7,7 +7,6 @@ import searchedMarket from '../stores/searchedMarket';
 import Spinner from "../components/Spinner";
 import { instance } from '../stores/network';
 
-
 const ProductView = () => {
     return (<>
         <div className="container p-2 overflow-scroll gap-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6" >
@@ -43,14 +42,8 @@ const ProductView = () => {
 
 
 const MarketView = () => {
-    const { small, markets, setMarkets } = searchedMarket;
-    createEffect(async () => {
-        await instance.get('d/markets').then((res) => {
-            setMarkets(res.data);
-        }).catch((err) => {
-            console.log(err);
-        })
-    })
+    const { small, list: markets, setMarkets } = searchedMarket;
+    const { categorie } = selectedCategorie;
     return (
         <>
             {!small() && <div className="p-2 overflow-scroll gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" >
@@ -61,8 +54,8 @@ const MarketView = () => {
                 </>}
                 {markets()
                     .filter(({ products }) => {
-                        if (!selectedCategorie.categorie()) return true;
-                        return products.map(({ categories }) => categories.includes(selectedCategorie.categorie())).includes(true);
+                        if (!categorie()) return true;
+                        return products.map(({ categories }) => categories.map(({ _id }) => _id).includes(categorie()._id)).flat().includes(true);
                     })
                     .map((market, index) => {
                         return (<MarketCard
