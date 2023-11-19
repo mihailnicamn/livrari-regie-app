@@ -1,4 +1,3 @@
-import { A, useLocation } from '@solidjs/router';
 import axios from 'axios';
 import { createSignal, createRoot, createEffect } from 'solid-js';
 import selectedCategorie from '../stores/selectedCategories';

@@ -4,9 +4,9 @@ import { A, useLocation } from '@solidjs/router';
 const HomeBtn = ({ location }) => {
   const loc = '/'
   return (<>
-    <A href={loc} class={`inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group ${location === loc ? 'text-blue-600' : 'text-black'}`}>
+    <button class={`inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group ${location === loc ? 'text-blue-600' : 'text-black'}`}>
       <i class="fa-regular fa-home" />
-    </A>
+    </button >
   </>)
 }
 const ComenziBtn = ({ location }) => {
@@ -47,7 +47,7 @@ const SetariBtn = ({ location }) => {
 }
 
 const NavMenu = () => {
-  const location = useLocation();
+  const location = window.location;
   return (
     <div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full overflow-hidden bottom-2 left-1/2 dark:bg-gray-700 dark:border-gray-600">
       <div class="grid h-full max-w-lg grid-cols-5 mx-auto">

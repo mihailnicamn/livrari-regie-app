@@ -1,14 +1,6 @@
 import { A } from '@solidjs/router';
 
 
-const NavItem = ({ href = '#', icon }) => {
-  return (<>
-    <A href={href} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-      <i class={`fa-solid fa-${icon}`} />
-    </A>
-  </>)
-};
-
 const PageFooter = () => {
   return (
     <footer class="mx-2">

@@ -1,4 +1,3 @@
-import { Routes, Route } from '@solidjs/router';
 import {
   Home,
   Cos,
@@ -11,13 +10,7 @@ import {
 function App() {
   return (
     <div class="text-center">
-      <Routes>
-        <Route component={Home} path="/" />
-        <Route component={Comenzi} path="/comenzi" />
-        <Route component={Cos} path="/cos" />
-        <Route component={Profil} path="/profil" />
-        <Route component={Setari} path="/setari" />
-      </Routes>
+      <Home />
     </div>
   );
 }
