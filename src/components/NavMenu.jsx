@@ -63,7 +63,7 @@ const ProfilBtn = () => {
   const color = createMemo(() => getColor(location() === loc))
   const goto = () => setLocation(loc)
   return (<>
-    <button class={`inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group ${color()}`} onClick={goto}>
+    <button class={`inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group ${color()}`} onClick={goto}>
       <Icon icon='clarity:user-solid' style={size()} />
     </button>
   </>)

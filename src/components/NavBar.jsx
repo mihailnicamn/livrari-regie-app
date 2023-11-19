@@ -44,7 +44,7 @@ const NavBar = () => {
         </div>
       </div >
       {small() &&
-        <div class={`absolute overflow-scroll top-0 left-0 w-full bg-white h-full `} style={{ zIndex: 100 }}>
+        <div class={`fade absolute overflow-scroll top-0 left-0 w-full bg-white h-full `} style={{ zIndex: 100 }}>
           <div class="mt-[60px] mb-[100px]">
             <div class='p-2 overflow-scroll gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
               {queriedMarkets()
