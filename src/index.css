@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        display: block;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+        filter: blur(0px);
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(10px);
+        display: none;
+    }
+}
+
+.fade {
+    animation-name: fadein;
+    animation-duration: 0.2s;
+}
+
+.fadeout {
+    animation-name: fadeout;
+    animation-duration: 0.2s;
+    display: none;
+}

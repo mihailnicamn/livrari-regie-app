@@ -1,0 +1,109 @@
+{
+  "name": ".",
+  "version": "0.1.0",
+  "private": true,
+  "showcases": [
+    {
+      "kit": "solidjs-tailwind",
+      "name": "GitHub Showcase",
+      "repo": "https://github.com/thisdot/starter.dev-github-showcases/tree/main/solidjs-tailwind",
+      "app": "https://solidjs-tailwind.starter.dev",
+      "icon": "GitHub"
+    }
+  ],
+  "description": "SolidJS and TailwindCSS",
+  "contributors": [
+    "Maarten Bicknese <maarten.bicknese@thisdot.co>",
+    "Chinedu Okpala <chinedu.okpala@thisdot.co>",
+    "Daian Scuarissi <daian@thisdot.co>",
+    "Mattia Magi <mattia.magi@thisdot.co>",
+    "Mark Shenouda <mark@thisdot.co>",
+    "Victor Umeh <victor.umeh@thisdot.co>",
+    "Dane Grant <dane@thisdot.co>",
+    "Jan Kaiser <jan.kaiser@thisdot.co>",
+    "Jerry Hogan <jerry.hogan@thisdot.co>",
+    "Jesus Padron <jesus.padron@thisdot.co>"
+  ],
+  "scripts": {
+    "start": "vite",
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "lint": "eslint --ext .js,.jsx ./src",
+    "lint-fix": "eslint --ext .js,.jsx ./src --fix",
+    "format": "prettier --write ./src --ignore-path .gitignore",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.21.8",
+    "@solidjs/router": "0.8.2",
+    "@solidjs/testing-library": "0.7.0",
+    "@storybook/addon-actions": "7.0.8",
+    "@storybook/addon-backgrounds": "7.0.8",
+    "@storybook/addon-docs": "7.0.8",
+    "@storybook/addon-essentials": "7.0.8",
+    "@storybook/addon-interactions": "7.0.8",
+    "@storybook/addon-links": "7.0.8",
+    "@storybook/addon-measure": "7.0.8",
+    "@storybook/addon-outline": "7.0.8",
+    "@storybook/blocks": "7.0.8",
+    "@storybook/client-api": "7.0.8",
+    "@storybook/client-logger": "7.0.8",
+    "@storybook/core-common": "7.0.8",
+    "@storybook/testing-library": "0.0.14-next.2",
+    "@testing-library/jest-dom": "5.16.5",
+    "@typescript-eslint/parser": "5.59.2",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.39.0",
+    "eslint-plugin-solid": "0.12.1",
+    "eslint-plugin-storybook": "0.6.12",
+    "eslint-plugin-unused-imports": "2.0.0",
+    "jsdom": "22.0.0",
+    "msw": "1.2.1",
+    "postcss": "8.4.23",
+    "prettier": "2.8.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.0.8",
+    "storybook-addon-mock": "4.0.0",
+    "storybook-solidjs": "1.0.0-beta.2",
+    "storybook-solidjs-vite": "1.0.0-beta.2",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4",
+    "vite": "4.3.4",
+    "vite-plugin-solid": "2.7.0",
+    "vitest": "0.31.0",
+    "whatwg-fetch": "3.6.2"
+  },
+  "dependencies": {
+    "@tanstack/solid-virtual": "^3.0.0-beta.6",
+    "axios": "^1.6.2",
+    "solid-js": "1.7.4",
+    "solid-zustand": "^1.7.1",
+    "zustand": "^4.4.6"
+  },
+  "keywords": [
+    "solidjs",
+    "tailwind",
+    "typescript",
+    "vite",
+    "storybook",
+    "mock-service-worker",
+    "react",
+    "vitest"
+  ],
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom",
+        "@babel/*",
+        "webpack",
+        "@storybook/*"
+      ]
+    }
+  }
+}
